@@ -18,7 +18,7 @@ Sample WalkThrough
  
 4. Displays cost for each person
  * The diffrence between the bill total and the sum of indvidual cost is split evenly
- ![Activity 4 (content_results.xml)]()
+ ![Activity 4 (content_results.xml)](https://github.com/beny2000/billSpliter/blob/master/activity4.png)
 
 
 Improvements and fixes for future versions
