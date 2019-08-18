@@ -37,22 +37,17 @@ public class AddPeople extends AppCompatActivity {
 
         final  LinearLayout ll = (LinearLayout)findViewById(R.id.linear_layout);
 
-
         Button btn_addPerson = (Button)findViewById(R.id.btn_addPerson);
         btn_addPerson.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+                //adds EditText for name input
                 EditText ett = new EditText(AddPeople.this);
                 ett.setText("Name");
                 ll.addView(ett);
-
-
             }
         });
-
-
 
         Button btn_next = (Button)findViewById(R.id.btn_next_addItems);
         btn_next.setOnClickListener(new View.OnClickListener() {
@@ -61,25 +56,17 @@ public class AddPeople extends AppCompatActivity {
             public void onClick(View v) {
                 String[] array = new String[ll.getChildCount()];
 
+                //adds names to array
                 for (int i=0; i < ll.getChildCount(); i++){
                     EditText editText = (EditText)ll.getChildAt(i);
                     array[i] = editText.getText().toString();
                 }
 
-
-
-
+                //passes array to next activity
                 Intent intent = new Intent(AddPeople.this, AddItems.class);
                 intent.putExtra("array", array);
                 startActivity(intent);
-
-
-
             }
         });
-
-
-
     }
-
 }

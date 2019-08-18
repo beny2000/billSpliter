@@ -49,11 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                //switches to next activity on click
                 Intent myIntent = new Intent(MainActivity.this, AddPeople.class);
                 startActivity(myIntent);
             }
         });
-
     }
-
 }
